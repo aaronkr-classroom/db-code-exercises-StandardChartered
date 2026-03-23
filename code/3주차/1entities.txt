@@ -1,0 +1,30 @@
+[Entities]
+- user
+- clan
+- status
+
+[user prop]
+- id (bigserial)
+- nickname (varchar(30))
+- job_class (varchar(20))
+- level (int(5)
+- phone_number (varchar(15))
+- lank (varchar(20))
+-clan_id
+
+[status prop]
+- user_id (user_P_key)
+- STR(int)
+- DEX(int)
+- INT(int)
+- LUK(int)
+- speed(int)
+- jumping_ability(int)
+
+[clan prop]
+- clan_id(bigserial)
+- clan_name (varchar(50))
+- master_id(user_id)
+- max_user(int(50))
+-current_user(int)
+-create_at (Timestamp default current_timestamp)

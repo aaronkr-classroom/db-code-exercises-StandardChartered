@@ -1,0 +1,35 @@
+table UserAccount{
+	user_id int [PK]
+	email varchar
+	password varchar
+	created_at TIMESTAMP
+};
+
+table Character{
+	character_id int [PK]
+	user_id int
+	name varchar
+	level int
+	calss varchar
+	
+	};
+table Item{
+	item_id int [PK]
+	name varchar
+	type varchar
+};
+
+table Inventory{
+	character_id int
+	item_id int
+	quantity int
+	indexes{
+        (character_iity int
+	iuser    d, item_id)
+    } 
+	
+};
+
+Ref : Character.user_id > Character.character_id
+	Ref : Inventory.item_id > Item.item_id
+    Ref : Character.user_id > UserAccount.user_id
